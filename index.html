@@ -33,10 +33,14 @@
       </button>
 
       <form action="#">
-        <input type="text" name="first name" id="f_name" placeholder="First Name" >
-        <input type="text" name="last name" id="l_name" placeholder="Last Name" >
-        <input type="email" id="email" placeholder="Email Address" >
-        <input type="password" id="pass" name="password" placeholder="Password" >
+        <input type="text" name="first name" id="f_name" placeholder="First Name" > <img src="images/icon-error.svg" class="error-icon" id="error-img" alt="">
+        <p class="error-messages" id="error-msg">First Name cannot be empty</p>
+
+        <input type="text" name="last name" id="l_name" placeholder="Last Name" > <img src="images/icon-error.svg" class="error-icon" id="error-img" alt=""><p class="error-messages" id="error-msg">Last Name cannot be empty</p>
+
+        <input type="email" id="email" placeholder="Email Address" > <img src="images/icon-error.svg" class="error-icon" id="error-img" alt=""><p class="error-messages" id="error-msg">Looks like this is not an email</p>
+
+        <input type="password" id="pass" name="password" placeholder="Password"> <img src="images/icon-error.svg" class="error-icon" id="error-img" alt=""><p class="error-messages" id="error-msg">Password cannot be empty</p>
 
         <button class="claim">
           Claim your free trial 
