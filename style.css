@@ -86,7 +86,6 @@ form input {
 
 form input::placeholder {
     font-weight: 600;
-    display: block;
 }
 
 .claim {

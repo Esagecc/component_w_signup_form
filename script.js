@@ -15,6 +15,7 @@ function checkFields() {
      errorIcon[0].style.display = 'inline';
      errorMessage[0].style.display = 'flex';
      document.getElementById('f_name').style.border = '1px solid hsl(0, 100%, 74%)';
+     event.preventDefault()
     }
 
     if (document.getElementById('l_name').value.length == '')
@@ -22,6 +23,7 @@ function checkFields() {
     errorIcon[1].style.display = 'inline';
     errorMessage[1].style.display = 'flex';
     document.getElementById('l_name').style.border = '1px solid hsl(0, 100%, 74%)';   
+    event.preventDefault()
     }
 
     if (document.getElementById('pass').value.length == '')
@@ -30,18 +32,17 @@ function checkFields() {
     errorMessage[3].style.display = 'flex';
     document.getElementById('pass').style.border = '1px solid hsl(0, 100%, 74%)';
     event.preventDefault()
-    
     }
 
     if (!emailRegex.test(emailField.value)) 
     {
-    console.log('need an email ')
+    document.getElementsByName('email')[0].placeholder = 'email@example/com';    
+    // document.getElementsByName('email').style.placeholderColor = 'hsl(0, 100%, 74%)';
+    console.log('need an email ');
     errorIcon[2].style.display = 'inline';
     errorMessage[2].style.display = 'flex';
     emailField.style.border = '1px solid hsl(0, 100%, 74%)';
-    // document.querySelector('form input placeholder').style.display = 'none';
-
-    console.log(emailField.value);
     event.preventDefault()
+    console.log(emailField.value);
     }
 }
