@@ -86,6 +86,7 @@ form input {
 
 form input::placeholder {
     font-weight: 600;
+    display: block;
 }
 
 .claim {
@@ -133,11 +134,11 @@ form input::placeholder {
 .error-icon {
     position: absolute;
     transform: translate(-40px, 15px);
-    display: inline;
+    display: none;
 }
 
 .error-messages {
-    display: flex;
+    display: none;
     position: relative;
     justify-content: flex-end;
     font-size: 10px;
@@ -145,6 +146,13 @@ form input::placeholder {
     color: var(--red);
     margin-top: -12px;
     padding-bottom: 20px;
+}
+
+.error-email {
+    display: inline;
+    color: var(--red);
+    font-size: 14px;
+    display: none;
 }
 
 @media (min-width: 700px) {
